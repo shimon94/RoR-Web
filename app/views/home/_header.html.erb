@@ -42,6 +42,10 @@ body {
 <div class="topnav">
        <% if user_signed_in? %>
 
+  <a class="active">
+  <%= link_to 'דף הבית לא עובד', home_dashboard_path, class: "nav-link" %>
+	</a>
+
 
   <a class="active">
   <%= link_to 'דשבורד', home_dashboard_path, class: "nav-link" %>
