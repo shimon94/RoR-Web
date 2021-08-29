@@ -1,13 +1,11 @@
 class HomeController < ApplicationController
-  def index
-    
-    def index
-
-    end
-    
+  def index    
   end
 
   def about
+  end
+
+  def dashboard 
   end
 
 end
