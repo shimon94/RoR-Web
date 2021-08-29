@@ -22,9 +22,9 @@
         <td><%= product.category %></td>
         <td><%= product.description %></td>
         <td><%= product.price %></td> 
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'צפה במוצר', product %></td>
+        <td><%= link_to 'שנה את המוצר', edit_product_path(product) %></td>
+        <td><%= link_to 'מחק את המוצר', product, method: :delete, data: { confirm: '?בטוח' } %></td>
         
         <% end %>
 
@@ -35,7 +35,7 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'חזור', home_dashboard_path %>
 
 </div>
 

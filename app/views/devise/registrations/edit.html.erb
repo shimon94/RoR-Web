@@ -25,17 +25,17 @@
 <br>
 <br>
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.label :password_confirmation, "סיסמא חדשה" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "סיסמא חדשה" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+    <%= f.label :current_password, "אישור סיסמא" %> <br />
+    <%= f.password_field :current_password, autocomplete: "אישור סיסמא" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "עדכן" %>
   </div>
 <% end %>
 
