@@ -2,10 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.card {
-    width: auto;
-}
 
-body {
-    background: #eee
-}
+div.gallery {
+    margin: auto;
+    border: 1px solid #ccc;
+    float: left;
+    width: 280px;
+    text-align: center;
+    align-self: auto;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
