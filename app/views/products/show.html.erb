@@ -1,4 +1,8 @@
+
 <p id="notice"><%= notice %></p>
+
+<%if @product.user == current_user %>
+
 
 <p>
   <strong>כותרת:</strong>
@@ -19,6 +23,29 @@
   <strong>מחיר:</strong>
   <%= @product.price %>
 </p>
-
 <%= link_to 'עריכה', edit_product_path(@product) %> |
 <%= link_to 'חזור', products_path %>
+
+<%else%>
+<p>
+  <strong>כותרת:</strong>
+  <%= @product.title %>
+</p>
+
+<p>
+  <strong>קטגריה:</strong>
+  <%= @product.category %>
+</p>
+
+<p>
+  <strong>תיאור:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>מחיר:</strong>
+  <%= @product.price %>
+</p>
+<%= link_to 'חזור', products_path %>
+
+<%end%>
