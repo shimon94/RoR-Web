@@ -1,24 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @product.category %>
-</p>
+<div class="d-flex justify-content-center container mt-5">
+    <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
+        <div class="about-product text-center mt-2"><img src="https://i.imgur.com/3VTaSeb.png" width="300">
+            <div>
+                <h4><%= @product.title %></h4>
+                <h6 class="mt-0 text-black-50"> </h6>
+                <%= @product.category %>
+                <h4><%= @product.description %></h4>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between total font-weight-bold mt-4"><span> מחיר</span></div>
+        <div><span><%= @product.price %></span></div>
+        <div>
+        
+        <%if @product.user == current_user %>
+        <%= link_to 'עריכה', edit_product_path(@product) %>
+        <%= link_to 'חזור', products_path %>
+        <%= link_to 'מחק ', @product, method: :delete, data: { confirm: '?בטוח' } %>
+<%else%>
+<%= link_to 'חזור', products_path %>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+        <%end%>
+
+</div>
+
+

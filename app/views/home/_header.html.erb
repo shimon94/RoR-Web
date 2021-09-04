@@ -1,75 +1,82 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-<%= link_to 'Haskara', root_path, class: "navbar-brand"  %>
+.topnav {
+  overflow: hidden;
+  background-color: green;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 500
+  
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  overflow: hidden;
+  padding: 10px;
+  border: 2px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color:green;
+  color: green;
+}
 
 
+</style>
+</head>
 
+<div class="topnav">
        <% if user_signed_in? %>
 
-       <li class="nav-item">
-       <%= link_to 'Dashboard', home_dashboard_path, class: "nav-link" %>
-       </li>
- 
-
-       <li class="nav-item">
-       <%= link_to 'Add Product', new_product_path, class: "nav-link" %>
-       </li>
-
-      
-       <li class="nav-item">
-       <%= link_to 'Edit Profile', edit_user_registration_path, class: "nav-link" %>
-       </li>
+  <a class="active">
+  <%= link_to 'דף הבית', products_path, class: "nav-link" %>
+	</a>
 
 
+  <a class="active">
+  <%= link_to 'דשבורד', home_dashboard_path, class: "nav-link" %>
+	</a>
+  
+  <a class="active">
+       <%= link_to 'עריכת פרופיל', edit_user_registration_path, class: "nav-link" %>
+       </a>
 
-      <li class="nav-item">
-      <%= link_to "Sign Out ", destroy_user_session_path, method: :delete, class: "nav-link" %>
-      </li>
+
+
+  <a class="active">
+      <%= link_to "להתנתק ", destroy_user_session_path, method: :delete, class: "nav-link" %>
+      </a>
 
 
 
 
         <%else%>
 
-        <li class="nav-item">
-        <%= link_to "Sign In ", new_user_session_path, class: "nav-link" %>
-        </li>
+  <a class="active">
+        <%= link_to "להתחבר ", new_user_session_path %>
+        </a>
   
-        <li class="nav-item">
-        <%= link_to "Sign Up ", new_user_registration_path, class: "nav-link" %>
-        </li>
-  
-
+  <a class="active">
+        <%= link_to "להרשם ", new_user_registration_path %>
+        </a>
         <%end%>
 
+</div>
 
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            categories
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+ <body>
+</body>
+</html>

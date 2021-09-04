@@ -1,7 +1,7 @@
 <%= form_with(model: product) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+      <h2><%= pluralize(product.errors.count, "error") %> תקלה</h2>
 
       <ul>
         <% product.errors.each do |error| %>
@@ -19,26 +19,28 @@
 
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :כותרת %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :category %>
+    <%= form.label :קטגוריה %>
     <%= form.text_field :category %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :תיאור %>
     <%= form.text_area :description %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
+    <%= form.label :מחיר %>
     <%= form.number_field :price %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "העלה מוצר" %>
   </div>
 <% end %>
+
+
