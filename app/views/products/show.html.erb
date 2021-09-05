@@ -1,15 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-
+<% if @product.images.attached? %>
 <div class="d-flex justify-content-center container mt-5">
     <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-        <div class="about-product text-center mt-2"><img src="https://i.imgur.com/3VTaSeb.png" width="300">
+        <div class="about-product text-center mt-2">
+        <% @product.images.each do |image| %>
+    <%= image_tag(image, :size => "260x180", :crop => :fill) %>
+  <% end %>
+ </p>
+<% end %>
+
+
             <div>
                 <h4><%= @product.title %></h4>
                 <h6 class="mt-0 text-black-50"> </h6>
                 <%= @product.category %>
                 <h4><%= @product.description %></h4>
-
 
             </div>
         </div>

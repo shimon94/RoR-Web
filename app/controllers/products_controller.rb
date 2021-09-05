@@ -68,6 +68,10 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:title, :category, :description, :price, :user_id)
+      params.require(:product).permit(:title, :category, :description, :price, :user_id, images: [])
+
+      # if you want to attach a file to the existing model somewhere else in the controller code, here’s how you do it:
+      # @product.image.attach(params[:image])
+
     end
 end

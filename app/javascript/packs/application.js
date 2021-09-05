@@ -8,6 +8,11 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+
+import * as ActiveStorage from "activestorage";
+import "../utils/direct_uploads.js"
+
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

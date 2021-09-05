@@ -28,6 +28,14 @@
     <%= form.text_field :category %>
   </div>
 
+
+  <div class="field">
+  <%= form.label :תמונות %>
+  <%= form.file_field :images, multiple: true, direct_upload: true %>
+</div>
+
+
+
   <div class="field">
     <%= form.label :תיאור %>
     <%= form.text_area :description %>
