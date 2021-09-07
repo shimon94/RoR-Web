@@ -14,7 +14,7 @@ Features:
 Database:
   Mysql
   root
-  adminadmin(same password local)
+  Adminadmin
   
-  
+ Some Security issues 
  I
